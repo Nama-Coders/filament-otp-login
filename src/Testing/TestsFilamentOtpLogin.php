@@ -1,6 +1,6 @@
 <?php
 
-namespace Afsakar\FilamentOtpLogin\Testing;
+namespace Namacoders\FilamentOtpLogin\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

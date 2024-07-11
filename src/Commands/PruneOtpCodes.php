@@ -1,8 +1,8 @@
 <?php
 
-namespace Afsakar\FilamentOtpLogin\Commands;
+namespace Namacoders\FilamentOtpLogin\Commands;
 
-use Afsakar\FilamentOtpLogin\Models\OtpCode;
+use Namacoders\FilamentOtpLogin\Models\OtpCode;
 use Illuminate\Console\Command;
 
 class PruneOtpCodes extends Command

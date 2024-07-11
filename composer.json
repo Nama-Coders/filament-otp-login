@@ -71,10 +71,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Afsakar\\FilamentOtpLogin\\FilamentOtpLoginServiceProvider"
+                "Namacoders\\FilamentOtpLogin\\FilamentOtpLoginServiceProvider"
             ],
             "aliases": {
-                "FilamentOtpLogin": "Afsakar\\FilamentOtpLogin\\Facades\\FilamentOtpLogin"
+                "FilamentOtpLogin": "Namacoders\\FilamentOtpLogin\\Facades\\FilamentOtpLogin"
             }
         }
     },

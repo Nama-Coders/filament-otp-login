@@ -1,8 +1,8 @@
 <?php
 
-namespace Afsakar\FilamentOtpLogin;
+namespace Namacoders\FilamentOtpLogin;
 
-use Afsakar\FilamentOtpLogin\Filament\Pages\Login;
+use Namacoders\FilamentOtpLogin\Filament\Pages\Login;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
