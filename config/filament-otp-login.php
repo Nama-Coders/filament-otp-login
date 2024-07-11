@@ -2,6 +2,7 @@
 
 return [
     'table_name' => 'otp_codes',
+    'guard' => 'web',
 
     'otp_code' => [
         'length' => env('OTP_LOGIN_CODE_LENGTH', 6),

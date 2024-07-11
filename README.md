@@ -6,14 +6,14 @@
 ![Screenshot](https://banners.beyondco.de/Filament%20OTP%20Login.png?theme=light&packageManager=composer+require&packageName=afsakar%2Ffilament-otp-login&pattern=architect&style=style_1&description=Simple+OTP+Login+for+FilamentPHP&md=1&showWatermark=0&fontSize=100px&images=login)
 
 
-This package is an OTP Login for FilamentPHP. It is a simple package that allows you to login to your FilamentPHP application using OTP.
+This package is an OTP Login for FilamentPHP. It is a simple package that allows you to login to your FilamentPHP application using OTP. This package was forked from afsakar/filament-otp-login with auth guard addition
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require afsakar/filament-otp-login
+composer require namacoders/filament-otp-login
 ```
 
 You can publish and run the migrations with:
@@ -41,7 +41,7 @@ This is the contents of the published config file:
 ```php
 return [
     'table_name' => 'otp_codes', // Table name to store OTP codes
-
+    'guard' => 'web',
     'otp_code' => [
         'length' => env('OTP_LOGIN_CODE_LENGTH', 6), // Length of the OTP code
         'expires' => env('OTP_LOGIN_CODE_EXPIRES_SECONDS', 120), // Expiration time of the OTP code in seconds
@@ -52,10 +52,10 @@ return [
 
 ## Usage
 
-Just register the `Afsakar\FilamentOtpLogin\FilamentOtpLoginPlugin` plugin in the your panel provider file.
+Just register the `Namacoders\FilamentOtpLogin\FilamentOtpLoginPlugin` plugin in the your panel provider file.
 
 ```php
-use Afsakar\FilamentOtpLogin\FilamentOtpLoginPlugin;
+use Namacoders\FilamentOtpLogin\FilamentOtpLoginPlugin;
 
     public function panel(Panel $panel): Panel
     {
@@ -89,6 +89,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## Credits
 
 - [Azad Furkan ŞAKAR](https://github.com/afsakar)
+- [Abd AlRahman](https://github.com/namacoders)
 - [All Contributors](../../contributors)
 - [OTP Input inspiration](https://github.com/rajeshdewle/otp-pin-using-alpine-js-and-tailwindcss)
 

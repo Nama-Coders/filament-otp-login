@@ -1,21 +1,22 @@
 {
-    "name": "afsakar/filament-otp-login",
-    "description": "OTP Login for FilamentPHP",
+    "name": "namacoders/filament-otp-login",
+    "description": "OTP Login for FilamentPHP forked from afsakar/filament-otp-login",
     "keywords": [
+        "namacoders",
         "afsakar",
         "laravel",
         "filament-otp-login"
     ],
-    "homepage": "https://github.com/afsakar/filament-otp-login",
+    "homepage": "https://github.com/namacoders/filament-otp-login",
     "support": {
-        "issues": "https://github.com/afsakar/filament-otp-login/issues",
-        "source": "https://github.com/afsakar/filament-otp-login"
+        "issues": "https://github.com/namacoders/filament-otp-login/issues",
+        "source": "https://github.com/namacoders/filament-otp-login"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Azad Furkan ŞAKAR",
-            "email": "afsakarr@gmail.com",
+            "name": "Namacoders",
+            "email": "info@namacoders.com",
             "role": "Developer"
         }
     ],
@@ -39,13 +40,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Afsakar\\FilamentOtpLogin\\": "src/",
-            "Afsakar\\FilamentOtpLogin\\Database\\Factories\\": "database/factories/"
+            "Namacoders\\FilamentOtpLogin\\": "src/",
+            "Namacoders\\FilamentOtpLogin\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Afsakar\\FilamentOtpLogin\\Tests\\": "tests/"
+            "Namacoders\\FilamentOtpLogin\\Tests\\": "tests/"
         }
     },
     "scripts": {

@@ -44,7 +44,7 @@ class Login extends BaseLogin
     public function mount(): void
     {
 
-        if (Filament::auth()->check()) {
+        if (Filament::auth(config('filament-otp-login.guard'))->check()) {
             redirect()->intended(Filament::getUrl());
         }
 
@@ -89,17 +89,17 @@ class Login extends BaseLogin
     {
         $data = $this->form->getState();
 
-        if (! Filament::auth()->attempt($this->getCredentialsFromFormData($data), $data['remember'] ?? false)) {
+        if (! Filament::auth(config('filament-otp-login.guard'))->attempt($this->getCredentialsFromFormData($data), $data['remember'] ?? false)) {
             $this->throwFailureValidationException();
         }
 
-        $user = Filament::auth()->user();
+        $user = Filament::auth(config('filament-otp-login.guard'))->user();
 
         if (
             ($user instanceof FilamentUser) &&
             (! $user->canAccessPanel(Filament::getCurrentPanel()))
         ) {
-            Filament::auth()->logout();
+            Filament::auth(config('filament-otp-login.guard'))->logout();
 
             $this->throwFailureValidationException();
         }
@@ -285,7 +285,7 @@ class Login extends BaseLogin
 
     protected function checkCredentials($data): void
     {
-        if (! Filament::auth()->validate($this->getCredentialsFromFormData($data))) {
+        if (! Filament::auth(config('filament-otp-login.guard'))->validate($this->getCredentialsFromFormData($data))) {
             $this->throwFailureValidationException();
         }
     }
